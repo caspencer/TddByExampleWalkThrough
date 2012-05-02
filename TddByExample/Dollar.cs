@@ -14,9 +14,9 @@ namespace TddByExample
             Amount = amount;
         }
 
-        public void Times(int multiplier)
+        public Dollar Times(int multiplier)
         {
-            Amount *= multiplier;
+            return new Dollar(Amount * multiplier);
         }
     }
 }

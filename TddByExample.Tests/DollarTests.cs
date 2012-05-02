@@ -11,7 +11,7 @@ namespace TddByExample.Tests
     // [ ] $5 + 10 CHF = $10 if rate is 2:1
     // [X] $5 x 2 = $10
     // [ ] Make "Amount" private
-    // [ ] Dollar side-effects?
+    // [X] Dollar side-effects?
     // [ ] Money rounding?
 
     public class DollarTests
@@ -20,8 +20,10 @@ namespace TddByExample.Tests
         public void Multiplication()
         {
             Dollar five = new Dollar(5);
-            five.Times(2);
-            Assert.Equal(10, five.Amount);
+            Dollar product = five.Times(2);
+            Assert.Equal(10, product.Amount);
+            product = five.Times(3);
+            Assert.Equal(15, product.Amount);
         }
     }
 }
