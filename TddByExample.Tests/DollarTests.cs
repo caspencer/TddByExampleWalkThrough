@@ -9,16 +9,19 @@ namespace TddByExample.Tests
 {
     // TODO LIST:
     // [ ] $5 + 10 CHF = $10 if rate is 2:1
-    // [ ] $5 x 2 = $10
+    // [X] $5 x 2 = $10
+    // [ ] Make "Amount" private
+    // [ ] Dollar side-effects?
+    // [ ] Money rounding?
 
     public class DollarTests
     {
         [Fact]
         public void Multiplication()
         {
-            //Dollar five = new Dollar(5);
-            //five.times(2);
-            //Assert.Equal(10, five.amount);
+            Dollar five = new Dollar(5);
+            five.Times(2);
+            Assert.Equal(10, five.Amount);
         }
     }
 }

@@ -49,6 +49,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TddByExample\TddByExample.csproj">
+      <Project>{2C4AF869-6FA1-4E4A-BD9A-ACF85F15DC49}</Project>
+      <Name>TddByExample</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
