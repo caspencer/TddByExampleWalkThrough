@@ -1,23 +1,31 @@
 ﻿namespace TddByExample
 {
-    public abstract class Money
+    public class Money
     {
         protected int Amount;
 
-        public string Currency { get; protected set; }
-
-        internal Money(int amount, string currency)
+        public Money(int amount, string currency)
         {
             Amount = amount;
             Currency = currency;
         }
 
-        public abstract Money Times(int multiplier);
+        public string Currency { get; protected set; }
+
+        public Money Times(int multiplier)
+        {
+            return new Money(Amount*multiplier, Currency);
+        }
 
         public override bool Equals(object obj)
         {
-            Money money = (Money)obj;
-            return Amount == money.Amount && GetType() == money.GetType();
+            Money money = (Money) obj;
+            return Amount == money.Amount && Currency == money.Currency;
+        }
+
+        public override string ToString()
+        {
+            return Amount + " " + Currency;
         }
 
         public static Money Dollar(int amount)
