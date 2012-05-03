@@ -15,6 +15,8 @@ namespace TddByExample.Tests
     // [ ] Money rounding?
     // [X] Equals()
     // [ ] GetHashCode()
+    // [ ] Equal null
+    // [ ] Equal object
 
     public class DollarTests
     {
