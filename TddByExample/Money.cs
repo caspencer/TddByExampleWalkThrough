@@ -4,6 +4,14 @@
     {
         protected int Amount;
 
+        public string Currency { get; protected set; }
+
+        internal Money(int amount, string currency)
+        {
+            Amount = amount;
+            Currency = currency;
+        }
+
         public abstract Money Times(int multiplier);
 
         public override bool Equals(object obj)
@@ -14,12 +22,12 @@
 
         public static Dollar Dollar(int amount)
         {
-            return new Dollar(amount);
+            return new Dollar(amount, "USD");
         }
 
         public static Franc Franc(int amount)
         {
-            return new Franc(amount);
+            return new Franc(amount, "CHF");
         }
     }
 }
