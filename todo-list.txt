@@ -13,7 +13,7 @@ TODO LIST
 [X] 5 CHF * 2 = 10 CHF
 [ ] Dollar/Franc duplication
 [X] Common Equals()
-[ ] Common Times()
+[X] Common Times()
 [X] Compare Francs with Dollars
 [X] Currency?
 [ ] Delete FrancMultiplication test?
