@@ -7,22 +7,22 @@ namespace TddByExample
 {
     public class Dollar
     {
-        public int Amount;
+        private int amount;
 
         public Dollar(int amount)
         {
-            Amount = amount;
+            this.amount = amount;
         }
 
         public Dollar Times(int multiplier)
         {
-            return new Dollar(Amount * multiplier);
+            return new Dollar(amount * multiplier);
         }
 
         public override bool Equals(object obj)
         {
             Dollar dollar = (Dollar) obj;
-            return Amount == dollar.Amount;
+            return amount == dollar.amount;
         }
     }
 }
