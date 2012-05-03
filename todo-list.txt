@@ -16,3 +16,4 @@ TODO LIST
 [ ] Common Times()
 [X] Compare Francs with Dollars
 [ ] Currency?
+[ ] Delete FrancMultiplication test?
