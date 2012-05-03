@@ -11,9 +11,9 @@ TODO LIST
 [ ] Equal null
 [ ] Equal object
 [X] 5 CHF * 2 = 10 CHF
-[ ] Dollar/Franc duplication
+[X] Dollar/Franc duplication
 [X] Common Equals()
 [X] Common Times()
 [X] Compare Francs with Dollars
 [X] Currency?
-[ ] Delete FrancMultiplication test?
+[X] Delete FrancMultiplication test?
