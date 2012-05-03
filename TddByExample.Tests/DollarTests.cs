@@ -7,17 +7,6 @@ using Xunit;
 
 namespace TddByExample.Tests
 {
-    // TODO LIST:
-    // [ ] $5 + 10 CHF = $10 if rate is 2:1
-    // [X] $5 x 2 = $10
-    // [X] Make "amount" private
-    // [X] Dollar side-effects?
-    // [ ] Money rounding?
-    // [X] Equals()
-    // [ ] GetHashCode()
-    // [ ] Equal null
-    // [ ] Equal object
-
     public class DollarTests
     {
         [Fact]
