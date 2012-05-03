@@ -43,9 +43,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DollarTests.cs" />
-    <Compile Include="FrancTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
