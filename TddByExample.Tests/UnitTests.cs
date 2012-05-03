@@ -15,7 +15,7 @@ namespace TddByExample.Tests
         [Fact]
         public void FrancMultiplication()
         {
-            Franc five = Money.Franc(5);
+            Money five = Money.Franc(5);
             Assert.Equal(Money.Franc(10), five.Times(2));
             Assert.Equal(Money.Franc(15), five.Times(3));
         }
