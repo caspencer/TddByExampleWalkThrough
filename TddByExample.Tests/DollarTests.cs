@@ -13,6 +13,8 @@ namespace TddByExample.Tests
     // [ ] Make "Amount" private
     // [X] Dollar side-effects?
     // [ ] Money rounding?
+    // [X] Equals()
+    // [ ] GetHashCode()
 
     public class DollarTests
     {
@@ -24,6 +26,13 @@ namespace TddByExample.Tests
             Assert.Equal(10, product.Amount);
             product = five.Times(3);
             Assert.Equal(15, product.Amount);
+        }
+
+        [Fact]
+        public void Equality()
+        {
+            Assert.True(new Dollar(5).Equals(new Dollar(5)));
+            Assert.False(new Dollar(5).Equals(new Dollar(6)));
         }
     }
 }
