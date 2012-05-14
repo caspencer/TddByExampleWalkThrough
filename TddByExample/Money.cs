@@ -2,35 +2,40 @@
 {
     public class Money : IExpression
     {
-        protected int Amount;
+        private int _amount;
 
-        public Money(int amount, string currency)
+        public int Amount
         {
-            Amount = amount;
-            Currency = currency;
+            get { return _amount; }
         }
 
         public string Currency { get; protected set; }
 
+        public Money(int amount, string currency)
+        {
+            _amount = amount;
+            Currency = currency;
+        }
+
         public Money Times(int multiplier)
         {
-            return new Money(Amount*multiplier, Currency);
+            return new Money(_amount*multiplier, Currency);
         }
 
         public IExpression Plus(Money addend)
         {
-            return new Money(Amount + addend.Amount, Currency);
+            return new Sum(this, addend);
         }
 
         public override bool Equals(object obj)
         {
             Money money = (Money) obj;
-            return Amount == money.Amount && Currency == money.Currency;
+            return _amount == money._amount && Currency == money.Currency;
         }
 
         public override string ToString()
         {
-            return Amount + " " + Currency;
+            return _amount + " " + Currency;
         }
 
         public static Money Dollar(int amount)
@@ -42,5 +47,14 @@
         {
             return new Money(amount, "CHF");
         }
+
+        #region IExpression Members
+
+        public Money Reduce(string to)
+        {
+            return this;
+        }
+
+        #endregion
     }
 }
