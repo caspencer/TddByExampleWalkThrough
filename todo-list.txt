@@ -2,8 +2,8 @@ TODO LIST
 =========
 
 [ ] $5 + 10 CHF = $10 if rate is 2:1
-[ ] $5 + $5 = $10
+[X] $5 + $5 = $10
 [ ] Return Money from $5 + $5
 [X] Bank.Reduce(Money)
-[ ] Reduce Money with conversion
-[ ] Reduce(Bank, string)
+[X] Reduce Money with conversion
+[X] Reduce(Bank, string)
