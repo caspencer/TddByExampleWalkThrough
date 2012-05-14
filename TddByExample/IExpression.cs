@@ -2,7 +2,7 @@
 {
     public interface IExpression
     {
-        Money Reduce(string to);
+        IExpression Plus(IExpression tenFrancs); 
         Money Reduce(Bank bank, string to);
     }
 }

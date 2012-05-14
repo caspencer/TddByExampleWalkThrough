@@ -17,14 +17,9 @@
             Currency = currency;
         }
 
-        public Money Times(int multiplier)
+        public IExpression Times(int multiplier)
         {
-            return new Money(_amount*multiplier, Currency);
-        }
-
-        public IExpression Plus(Money addend)
-        {
-            return new Sum(this, addend);
+            return new Money(_amount * multiplier, Currency);
         }
 
         public override bool Equals(object obj)
@@ -50,10 +45,9 @@
 
         #region IExpression Members
 
-        public Money Reduce(string to)
+        public IExpression Plus(IExpression addend)
         {
-            int rate = (Currency == "CHF" && to == "USD") ? 2 : 1;
-            return new Money(Amount / rate, to);
+            return new Sum(this, addend);
         }
 
         public Money Reduce(Bank bank, string to)
