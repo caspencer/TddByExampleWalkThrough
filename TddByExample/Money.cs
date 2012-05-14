@@ -17,11 +17,6 @@
             Currency = currency;
         }
 
-        public IExpression Times(int multiplier)
-        {
-            return new Money(_amount * multiplier, Currency);
-        }
-
         public override bool Equals(object obj)
         {
             Money money = (Money) obj;
@@ -54,6 +49,11 @@
         {
             int rate = bank.Rate(Currency, to);
             return new Money(Amount / rate, to);
+        }
+
+        public IExpression Times(int multiplier)
+        {
+            return new Money(_amount * multiplier, Currency);
         }
 
         #endregion

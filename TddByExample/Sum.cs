@@ -13,15 +13,20 @@
 
         #region IExpression Members
 
-        public IExpression Plus(IExpression tenFrancs)
+        public IExpression Plus(IExpression addend)
         {
-            return null;
+            return new Sum(this, addend);
         }
 
         public Money Reduce(Bank bank, string to)
         {
             int amount = Augend.Reduce(bank, to).Amount + Addend.Reduce(bank, to).Amount;
             return new Money(amount, to);
+        }
+
+        public IExpression Times(int multiplier)
+        {
+            return new Sum(Augend.Times(multiplier), Addend.Times(multiplier));
         }
 
         #endregion
